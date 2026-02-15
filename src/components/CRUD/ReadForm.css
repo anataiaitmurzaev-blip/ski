@@ -1,0 +1,35 @@
+.read-form-container {
+    margin-top: 20px;
+    border: 2px solid #2622f1;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    
+  }
+  
+  .record-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    align-items: center;
+    color: blue;
+  }
+  
+  .record-table th {
+    background-color: #2622f1;
+    color: #ffffff;
+    padding: 10px;
+    align-items: center;
+  }
+  
+  .record-table td {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .record-image {
+    width: 100px;
+    height: auto;
+  }

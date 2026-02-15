@@ -1,0 +1,26 @@
+.delete-form-container {
+    margin-top: 20px;
+    border: 2px solid #2622f1;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .select-field {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2622f1;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .btn-delete {
+    padding: 10px 16px;
+    background-color: #2622f1;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

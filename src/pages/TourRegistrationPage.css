@@ -1,0 +1,89 @@
+.tour-registration-page {
+    margin-top: 20px;
+    border: 2px solid #2622f1;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .tour-registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Update: Set text-align to center */
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+    width: 100%;
+    border-radius: 20px;
+    align-items: center; /* Add: Center-align the form-group */
+  }
+  
+  label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffffff;
+    width: 100%;
+    padding: 5px 0;
+    margin-left: 90px; /* Update: Set text-align to center */
+  }
+  
+  input[type="date"],
+  input[type="text"],
+  select {
+    width: 600px;
+    text-align: left;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 60px;
+    margin: 0 auto; /* Add: Center-align the input/select elements */
+  }
+  
+  button[type="submit"] {
+    padding: 10px 16px;
+    background-color: #2622f1;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .tour-registration-page {
+      padding: 10px;
+      margin: 10px auto;
+      max-width: 100%;
+      width: 90%;
+    }
+  
+    .tour-registration-form {
+      align-items: stretch;
+    }
+  
+    .form-group {
+      width: 100%;
+      align-items: center;
+    }
+  
+    input[type="date"],
+    input[type="text"],
+    select {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  

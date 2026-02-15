@@ -1,0 +1,103 @@
+body {
+  background: linear-gradient(to bottom, #4e4376, #2b5876); /* Пример градиента */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.equipment-page {
+  padding: 20px;
+  background-color: rgba(89, 77, 77, 0.7); /* Прозрачный фон для лучшего контраста */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(244, 242, 242, 0.1);
+  animation: backgroundAnimation 10s infinite; /* Анимация фона */
+}
+
+.equipment-title h1 {
+  font-family: 'New Century Schoolbook', TeX Gyre Schola, serif;
+  color: #f1f1f1;
+  font-size: 50px;
+  background: rgba(245, 231, 231, 0.2); /* Прозрачный фон */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.price-filter {
+  margin-top: 20px;
+  color: white;
+}
+
+.price-filter label {
+  margin-right: 10px;
+}
+
+
+.price-filter input {
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.grid-item {
+  background: rgba(255, 255, 255, 0.3); /* Легкий белый фон для карточек */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #2622f1;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(10px); /* Размытие фона */
+}
+
+.grid-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.grid-item h3 {
+  margin-top: 10px;
+  color: white;
+}
+
+.grid-item p {
+  color: #f4f4f4;
+}
+
+.grid-item:hover {
+  transform: translateY(-8px); /* Эффект при наведении */
+}
+
+@media screen and (max-width: 768px) {
+  .equipment-title h1 {
+    font-size: 40px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@keyframes backgroundAnimation {
+  0% { background-color: #4e4376; }
+  50% { background-color: #2b5876; }
+  100% { background-color: #4e4376; }
+}

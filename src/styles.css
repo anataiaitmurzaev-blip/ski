@@ -1,0 +1,712 @@
+.header {
+  display: flex;
+  background-color: #110f14;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 70px;
+  color: #ffffff;
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+}
+
+.logo-container {
+  display: flex;
+  margin-left: 20px; /* Изменено значение на 20px */
+  margin-top: -20px;
+  align-items: center; /* Добавлено новое свойство */
+}
+
+.mountain-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  margin-top: 11px;
+  vertical-align: middle;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  color: #2622f1;
+}
+
+.fa-bars,
+.fa-times {
+  font-size: 20px;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.fa-bars {
+  transform: rotate(0deg);
+}
+
+.fa-times {
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .logo-container {
+    margin-left: 10px; /* Изменено значение на 10px */
+  }
+
+  .logo {
+    font-size: 18px; /* Изменено значение на 18px */
+  }
+}
+
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background-color:#0A0A0A;
+  color: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1;
+  padding-top: 50px;
+}
+
+.navigation.open {
+  transform: translateX(0%);
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #666;
+}
+.active {
+  font-weight: bold;
+  color:  #2622f1;
+  cursor: pointer;
+}
+
+h5 span::after {
+  content: '';
+  margin: 5px;
+}
+
+h5 {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1px;
+  background-color: #f3ebeb;
+  color: #fff;
+  height: 50px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.history,
+.culture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.culture-item,
+.history-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.culture-image,
+.history-image {
+  width: 1000px;
+  height: 500px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+
+
+.culture-item:hover .culture-caption,
+.history-item:hover .history-caption {
+  display: block;
+}
+
+.culture-caption,
+.history-caption {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(230, 226, 226, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.culture-caption h2,
+.culture-caption h3,
+.culture-caption p,
+.history-caption h2,
+.history-caption h3,
+.history-caption p {
+  margin: 0;
+  font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+  color: #ffffff;;
+}
+
+.culture-caption h2,
+.history-caption h2 {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.culture-caption h3,
+.history-caption h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.culture-caption p,
+.history-caption p {
+  font-size: 18px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.banner-text {
+  max-width: 900px;
+  margin: 40px auto 20px;
+  padding: 0 20px;
+
+  font-size: 18px;
+  line-height: 1.7;
+  color: #dcd5d5;
+  text-align: center;
+}
+
+.banner-text p {
+  margin-bottom: 16px;
+
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+  position: relative;
+}
+
+.banner-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.banner-title {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.banner-subtitle {
+  font-size: 22px;
+  max-width: 700px;
+}
+.landscape-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #000;
+  font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки в строке */
+  gap: 20px;
+}
+
+.grid-item {
+  background-color:#0b0a0a;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #2622f1;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.grid-item h3 {
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+}
+
+.grid-item p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+}
+
+.grid-item a {
+  display: inline-block;
+  background-color: #2196f3;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item a:hover {
+  background-color: #0d47a1;
+}
+
+.section {
+  position: relative;
+  padding: 20px;
+  border-radius: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border: 2px solid #2622f1;
+}
+
+.sections-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-top: 0;
+  
+}
+
+.section-title{
+  color: #ffffff;
+  font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+}
+
+.section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(252, 251, 251, 0.2);
+}
+
+.section-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.section:hover .section-image {
+  filter: brightness(50%);
+}
+
+.section-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(247, 236, 236, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.section:hover .section-image::after {
+  opacity: 1;
+}
+
+.section-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.section:hover .section-description {
+  opacity: 1;
+}
+
+.section:last-child .section-description {
+  margin-top: 30px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color:#050405;
+  overflow-y: scroll; 
+}
+
+.content {
+  flex-grow: 1;
+  margin-top: 70px;
+}
+
+code {
+  font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+}
+
+
+
+.search-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: -10px 0 20px;
+  background-color: #fffcfc;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
+}
+
+.search-input {
+  padding: 8px;
+  border-radius: 4px;
+  width: 200px;
+  margin-left: 15px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+}
+
+.filter-group label {
+  margin: 0 8px;
+  color: #fff;
+  font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+}
+
+.filter-select,
+.filter-input {
+  padding: 8px;
+  border-radius: 4px;
+  margin-right: 10px;
+  width: 150px;
+  font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+}
+
+.filter-select option {
+  padding: 8px;
+}
+
+.filter-input[type="date"] {
+  width: auto;
+}
+
+.filter-input[type="text"] {
+  width: 100px;
+  font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+}
+
+.button-anim {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.footer {
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  flex-shrink: 0;
+  font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+
+}
+.footer-social a{
+  margin-right: 15px;
+  font-size: 15px;
+  font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+  color: #007bff;
+}
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.footer-links a:hover {
+  color: #03ff25;
+}
+
+.footer-text {
+  margin-top: 10px;
+}
+
+footer {
+  margin-top: 300px;
+}
+
+.admin-title {
+  color: #ffffff;
+  text-align: center;
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.admin-title h2 {
+  color: #ffcc00;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.button-group {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-group button {
+  margin-right: 0;
+  padding: 12px 24px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #0052a3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button-group button.active {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.admin-panel {
+  margin-top: 30px;
+  min-height: 200px;
+}
+
+.panel-content {
+  background-color: #0d0d0d;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #ffcc00;
+}
+.rental-info {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.how-to-rent, .rent-conditions {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1, h2, h5 {
+  color: #fff;
+}
+
+h5 {
+  background-color: #000;
+}
+
+h5 span {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+h5 span.active {
+  color: #ffcc00;
+  font-weight: bold;
+}
+.equipment-page {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.equipment-title h1 {
+  color: white;
+}
+
+/* Кнопка Арендовать */
+.rent-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 20px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.rent-button:hover {
+  background-color: #20BA5A;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+}
+
+.rent-button:active {
+  transform: scale(0.98);
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid white;
+  background: black;
+  color: white;
+  outline: none;
+}
+
+.price-filter {
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.price-filter h3 {
+  color: white;
+}
+
+.price-filter input {
+  background: black;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на средних экранах */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr); /* 1 колонка на маленьких экранах */
+  }
+}

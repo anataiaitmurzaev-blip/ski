@@ -1,0 +1,48 @@
+.button-anim:hover {
+  background-color: #0056b3;
+}
+
+.form-group {
+  margin-bottom: 20px;
+ width: 1000px;
+}
+
+.form-group .form-input {
+  width: 900px;
+  height: 40px; /* Фиксированная высота */
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-family: 'New Century Schoolbook', 'TeX Gyre Schola', serif;
+}
+
+.form-group .form-button {
+  display: block;
+  width: 900px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: -10px;
+  font-weight: bold;
+  align-items: center;
+  font-family: 'New Century Schoolbook', 'TeX Gyre Schola', serif;
+}
+
+.form-group .form-button:hover {
+  background-color: #000;
+}
+
+.error-message {
+  color: #fff;
+ 
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.form-field {
+  margin-bottom: 15px;
+}
